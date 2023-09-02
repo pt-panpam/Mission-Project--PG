@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PG Near your college</title>
+    <script src="https://kit.fontawesome.com/665e7ae23f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img id="logo" src="logo.png" alt="">
+        </div>
+        <div class="search">
+            <input type="text" name="Input" id="searchBar" placeholder="Enter College for nearest PG/Hostel">
+        </div>
+        <div class="nevBar">
+           <ul>
+            <li class="nevlist"><a href="#home"><img class="nevicon" src="home.png" alt=""></a></li>
+            <li class="nevlist"><a href="#contactus"><img class="nevicon" src="contact.png" alt=""></a></li>
+            <li class="nevlist"><a href="login"><img class="nevicon" src="login.png" alt=""></a></li>
+           </ul> 
+        </div>
+        <div class="toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown_menu">
+            <li class="nevlist"> HOME<a href="#home"><img class="nevicon" src="home.png" alt=""></a></li>
+            <li class="nevlist"> CONTACT<a href="#contactus"><img class="nevicon" src="contact.png" alt=""></a></li>
+            <li class="nevlist"> LOGIN<a href="login"><img class="nevicon" src="login.png" alt=""></a></li>
+        </div>
+    </div>
+    <div class="message">
+        <h1 class="neontext">Worry! About Hostel/PG</h1>
+        <h2>Now you can choose Best option for you.</h2>
+    </div>
+    <div class="middlepart">
+        <div id="mainBox">
+            <div id="middleBox">
+                <div id="innerBox">
+                    <img class="mainbox" src="img5.jpg" alt="">
+                    <img class="mainbox" src="img6.jpeg" alt="">
+                    <img class="mainbox" src="img4.jpg" alt="">
+                    <img class="mainbox" src="img3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="detail">
+        <h1><u>Disclamer</u></h1>
+        <p><i>All hostel reviews are shown here are submitted by students.</i></p> 
+        <p><i>the uploaded photo of the hostel is posted by the owner of the hostel.</i></p>
+        <p><i>We request you to visit the hostel once and then take your decision.</i></p>
+    </div>
+    <div class="footer">
+        <div class="contactus">
+        <ul id="contact">
+            <li class="co"><img class="gif" src="https://media.giphy.com/media/ZB8xJQqO4JZDmgVNsu/giphy.gif" alt="" height="90px" width="90px"></li>
+            <li class="co"><a href="https://www.linkedin.com/in/abhijeet-mishra-4624a324a" target="_blank"> <img src="linkedin.png" alt="linkedin" width="50" height="50"></a></li>
+            <li class="co"><a href="https://twitter.com/pt_panpam" target="_blank"><img src="twitter.png" alt="twitter" width="50" height="50"></a></li>
+            <li class="co"><a href="https://www.instagram.com/pt_panpam/" target="_blank"><img src="insta.png" alt="instagram" width="50" height="50"></a></li>
+            <li class="co"><a href="https://www.facebook.com/pt.panpam/"target="_blank"><img src="fb.png" alt="facebook"width="40" height="40"></a></li>
+        </ul></div>
+    </div>
+    <div class="copyright">
+        <p>2023 hostelnearcollege.com. All rights reserved.</p>
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mainbox");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000);    
+        }
+        const toggle=document.querySelector('.toggle')
+        const toggleicon=document.querySelector('.toggle i')
+        const dropdown_menu=document.querySelector('.dropdown_menu')
+
+        toggle.onclick=function(){
+            dropdown_menu.classList.toggle('open')
+            const isOpem=dropdown_menu.classList.contains('open')
+            nevlist.classList=isOpen
+            ?'fa-solid fa-xmark'
+            :'fa-solid fa-bars'
+        }
+        </script>
+        
+</body>
+</html>
