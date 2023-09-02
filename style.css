@@ -178,6 +178,12 @@ body{
     }
 }
 @media(max-width:992px){
+    body{
+        background-color: black;
+    }
+    .header{
+        background-color: black;
+    }
     .nevBar, .search{
         display: none;
     }
